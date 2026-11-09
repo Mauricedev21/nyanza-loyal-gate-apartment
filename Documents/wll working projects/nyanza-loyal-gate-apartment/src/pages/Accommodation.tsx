@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { BedDouble, Bath, Wifi, Tv, Coffee, Snowflake, ArrowRight, Phone } from 'lucide-react'
+import { useSeo } from '@/lib/seo'
 import PageHero from '@/components/PageHero'
 import Reveal from '@/components/Reveal'
 import SectionHeading from '@/components/SectionHeading'
@@ -16,6 +17,12 @@ const amenities = [
 ]
 
 export default function Accommodation() {
+  useSeo(
+    'Accommodation at Nyanza Royal Gate Apartment',
+    'Comfortable, considered rooms and suites designed for restful stays in Nyanza, Rwanda — whether you visit for business or leisure.',
+    '/assets/rooms'
+  )
+
   return (
     <>
       <PageHero

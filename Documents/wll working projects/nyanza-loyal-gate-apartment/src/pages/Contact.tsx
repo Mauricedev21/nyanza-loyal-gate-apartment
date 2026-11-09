@@ -1,5 +1,6 @@
 import { Phone, Mail, MapPin, MessageCircle } from 'lucide-react'
 import { InstagramIcon, YoutubeIcon } from '@/components/BrandIcons'
+import { useSeo } from '@/lib/seo'
 import PageHero from '@/components/PageHero'
 import Reveal from '@/components/Reveal'
 import SectionHeading from '@/components/SectionHeading'
@@ -7,6 +8,12 @@ import InquiryForm from '@/components/InquiryForm'
 import { assets, site, whatsappLink, whatsappMessages } from '@/lib/site'
 
 export default function Contact() {
+  useSeo(
+    'Contact Us | Nyanza Royal Gate Apartment',
+    'We would be delighted to help with a booking, a catering quote or an upcoming celebration. Reach us by phone, WhatsApp or email.',
+    '/assets/conference'
+  )
+
   const cards = [
     {
       icon: Phone,

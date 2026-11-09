@@ -1,5 +1,6 @@
 import { useCallback, useEffect, useMemo, useState } from 'react'
 import { X, ChevronLeft, ChevronRight, ZoomIn } from 'lucide-react'
+import { useSeo } from '@/lib/seo'
 import PageHero from '@/components/PageHero'
 import Reveal from '@/components/Reveal'
 import SectionHeading from '@/components/SectionHeading'
@@ -8,6 +9,12 @@ import { assets, galleryCategories, galleryItems, type GalleryCategory } from '@
 type Filter = 'All' | GalleryCategory
 
 export default function Gallery() {
+  useSeo(
+    'Gallery | Nyanza Royal Gate Apartment',
+    'Explore our spaces, plates and celebrations. Filter by category and open any image for a closer look.',
+    '/assets/rooms'
+  )
+
   const [filter, setFilter] = useState<Filter>('All')
   const [activeIndex, setActiveIndex] = useState<number | null>(null)
 

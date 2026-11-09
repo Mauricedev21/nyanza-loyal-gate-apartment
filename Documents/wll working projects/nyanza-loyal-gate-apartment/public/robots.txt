@@ -1,0 +1,22 @@
+User-agent: *
+Allow: /
+
+# Sitemap URL
+Sitemap: https://nyanza-loyal-gate-apartment.vercel.app/sitemap.xml
+
+# Allow specific paths
+User-agent: Googlebot
+Allow: /
+Allow: /about
+Allow: /accommodation
+Allow: /services
+Allow: /catering
+Allow: /events
+Allow: /gallery
+Allow: /contact
+
+# Block administrative or sensitive paths
+User-agent: *
+Disallow: /dist/
+Disallow: /node_modules/
+Disallow: .git/

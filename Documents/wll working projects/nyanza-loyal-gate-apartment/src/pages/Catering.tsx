@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { UtensilsCrossed, Truck, Laptop, Heart, Building2, PartyPopper, ArrowRight } from 'lucide-react'
+import { useSeo } from '@/lib/seo'
 import PageHero from '@/components/PageHero'
 import Reveal from '@/components/Reveal'
 import SectionHeading from '@/components/SectionHeading'
@@ -16,6 +17,12 @@ const offerings = [
 ]
 
 export default function Catering() {
+  useSeo(
+    'RGA Catering | Wedding & Conference Catering Rwanda',
+    'Restaurant-quality catering for weddings, conferences and private celebrations — delivered with elegance, whether at our venue or yours.',
+    '/assets/weddings'
+  )
+
   return (
     <>
       <PageHero

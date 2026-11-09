@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { Heart, CakeSlice, Gem, ScrollText, Building2, PartyPopper, ArrowRight } from 'lucide-react'
+import { useSeo } from '@/lib/seo'
 import PageHero from '@/components/PageHero'
 import Reveal from '@/components/Reveal'
 import SectionHeading from '@/components/SectionHeading'
@@ -16,6 +17,12 @@ const eventTypes = [
 ]
 
 export default function Events() {
+  useSeo(
+    'Events & Celebrations | Nyanza Royal Gate Apartment',
+    'Weddings, proposals, birthdays, civil ceremonies, conferences and private celebrations — planned, styled and coordinated so every detail feels effortless.',
+    '/assets/conference'
+  )
+
   return (
     <>
       <PageHero

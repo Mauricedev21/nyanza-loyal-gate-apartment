@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { ArrowRight, HeartHandshake, Sparkles, ShieldCheck, Leaf, Users, Award } from 'lucide-react'
+import { useSeo } from '@/lib/seo'
 import PageHero from '@/components/PageHero'
 import Reveal from '@/components/Reveal'
 import SectionHeading from '@/components/SectionHeading'
@@ -24,6 +25,12 @@ const offerings = [
 ]
 
 export default function About() {
+  useSeo(
+    'About Nyanza Royal Gate Apartment',
+    'Nyanza Royal Gate Apartment brings together comfortable accommodation, thoughtful dining and beautifully run events — all delivered with the warmth of Rwandan hospitality.',
+    '/assets/rooms'
+  )
+
   return (
     <>
       <PageHero

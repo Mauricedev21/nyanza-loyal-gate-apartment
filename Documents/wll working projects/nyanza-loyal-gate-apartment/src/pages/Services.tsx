@@ -16,6 +16,7 @@ import {
   type LucideIcon,
 } from 'lucide-react'
 import { Link } from 'react-router-dom'
+import { useSeo } from '@/lib/seo'
 import PageHero from '@/components/PageHero'
 import Reveal from '@/components/Reveal'
 import SectionHeading from '@/components/SectionHeading'
@@ -38,6 +39,12 @@ const iconMap: Record<string, LucideIcon> = {
 }
 
 export default function Services() {
+  useSeo(
+    'Our Services | Nyanza Royal Gate Apartment',
+    'Thirteen considered services spanning accommodation, dining, catering, events, wellness and venue support — all delivered to one standard.',
+    '/assets/conference'
+  )
+
   return (
     <>
       <PageHero
