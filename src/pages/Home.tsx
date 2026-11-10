@@ -1,5 +1,4 @@
 import { Link } from 'react-router-dom'
-import { useEffect } from 'react'
 import {
   ArrowRight,
   BedDouble,
@@ -16,49 +15,6 @@ import {
 import Reveal from '@/components/Reveal'
 import SectionHeading from '@/components/SectionHeading'
 import { assets, galleryItems, serviceList, site, whatsappLink, whatsappMessages } from '@/lib/site'
-
-// SEO useEffect - sets page-specific metadata
-const useSeo = (title: string, description: string, image?: string) => {
-  useEffect(() => {
-    // Update title
-    document.title = `${title} | Nyanza Royal Gate Apartment`
-
-    // Update meta description
-    const existingDesc = document.querySelector('meta[name="description"]')
-    if (existingDesc) {
-      existingDesc.setAttribute('content', description)
-    } else {
-      const meta = document.createElement('meta')
-      meta.name = 'description'
-      meta.content = description
-      document.head.appendChild(meta)
-    }
-
-    // Update Open Graph tags if image provided
-    if (image) {
-      const ogTitle = document.querySelector('meta[property="og:title"]')
-      const ogDesc = document.querySelector('meta[property="og:description"]')
-      const ogImg = document.querySelector('meta[property="og:image"]')
-      if (ogTitle) ogTitle.setAttribute('content', title)
-      if (ogDesc) ogDesc.setAttribute('content', description)
-      if (ogImg) ogImg.setAttribute('content', image)
-
-      // Update Twitter tags
-      const twitterTitle = document.querySelector('meta[name="twitter:title"]')
-      const twitterDesc = document.querySelector('meta[name="twitter:description"]')
-      const twitterImg = document.querySelector('meta[name="twitter:image"]')
-      if (twitterTitle) twitterTitle.setAttribute('content', title)
-      if (twitterDesc) twitterDesc.setAttribute('content', description)
-      if (twitterImg) twitterImg.setAttribute('content', image)
-    }
-  }, [title, description, image])
-}
-
-useSeo(
-    'Nyanza Royal Gate Apartment',
-    'Luxury accommodation, exceptional catering and unforgettable events in Nyanza, Rwanda. Taste, Class, Perfection.',
-    '/assets/rooms.jpg'
-  )
 
 const featuredServices = [
   { ...serviceList[0], icon: BedDouble },
