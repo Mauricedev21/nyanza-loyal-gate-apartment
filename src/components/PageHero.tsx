@@ -22,13 +22,13 @@ export default function PageHero({ eyebrow, title, subtitle, image, crumb }: Pag
       <div className="absolute inset-0 -z-10 bg-gradient-to-b from-navy/80 via-navy/70 to-navy" />
       <div className="container-lux flex min-h-[42vh] flex-col justify-center py-16 sm:min-h-[46vh] sm:py-20">
         <nav aria-label="Breadcrumb" className="mb-5 flex items-center gap-2 text-xs uppercase tracking-[0.3em] text-white/55">
-          <Link to="/" className="transition-colors hover:text-gold-light">
+          <Link to="/" className="transition-colors hover:text-white-light">
             Home
           </Link>
           <span aria-hidden="true">/</span>
-          <span className="text-gold">{crumb}</span>
+          <span className="text-white">{crumb}</span>
         </nav>
-        <span className="eyebrow text-gold-light">
+        <span className="eyebrow text-white-light">
           <span className="h-px w-6 bg-current" />
           {eyebrow}
         </span>

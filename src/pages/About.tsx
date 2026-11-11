@@ -61,8 +61,8 @@ export default function About() {
             same standard of service beyond our walls, to venues across the region. The result is a complete
             hospitality experience that is easy to trust.
           </p>
-          <p className="mt-4 font-display text-xl italic text-gold">{site.tagline}</p>
-          <Link to="/accommodation" className="mt-7 inline-flex items-center gap-2 text-sm font-semibold text-gold transition-colors hover:text-navy">
+          <p className="mt-4 font-display text-xl italic text-white">{site.tagline}</p>
+          <Link to="/accommodation" className="mt-7 inline-flex items-center gap-2 text-sm font-semibold text-white transition-colors hover:text-navy">
             Plan your stay
             <ArrowRight className="h-4 w-4" aria-hidden="true" />
           </Link>
@@ -79,7 +79,7 @@ export default function About() {
               className="mx-auto h-24 w-auto max-w-full rounded-2xl object-contain ring-1 ring-white/10 sm:h-28"
               loading="lazy"
             />
-            <p className="mt-5 font-display text-xl italic text-gold-light">{site.tagline}</p>
+            <p className="mt-5 font-display text-xl italic text-white">{site.tagline}</p>
           </Reveal>
         </div>
       </section>
@@ -100,7 +100,7 @@ export default function About() {
               return (
                 <Reveal key={value.title} delay={index * 70}>
                   <div className="card h-full p-7">
-                    <span className="grid h-12 w-12 place-items-center rounded-full bg-navy text-gold">
+                    <span className="grid h-12 w-12 place-items-center rounded-full bg-navy text-white">
                       <Icon className="h-5 w-5" aria-hidden="true" />
                     </span>
                     <h3 className="mt-5 font-display text-xl font-semibold text-navy">{value.title}</h3>
@@ -126,7 +126,7 @@ export default function About() {
           {offerings.map((item, index) => (
             <Reveal key={item.title} delay={index * 60}>
               <div className="flex h-full gap-4 rounded-2xl border border-navy/10 bg-white p-6">
-                <span className="mt-1 h-2 w-2 shrink-0 rounded-full bg-gold" aria-hidden="true" />
+                <span className="mt-1 h-2 w-2 shrink-0 rounded-full bg-white" aria-hidden="true" />
                 <div>
                   <h3 className="font-display text-lg font-semibold text-navy">{item.title}</h3>
                   <p className="mt-1 text-sm leading-relaxed text-navy/60">{item.text}</p>
@@ -148,7 +148,7 @@ export default function About() {
           </Reveal>
           <Reveal delay={120}>
             <div className="flex flex-col gap-3 sm:flex-row">
-              <Link to="/contact" className="btn-gold">
+              <Link to="/contact" className="btn-silver">
                 Contact Us
               </Link>
               <a

@@ -71,7 +71,7 @@ export default function Contact() {
             const Icon = card.icon
             const content = (
               <>
-                <span className="grid h-12 w-12 place-items-center rounded-full bg-navy text-gold">
+                <span className="grid h-12 w-12 place-items-center rounded-full bg-navy text-white">
                   <Icon className="h-5 w-5" aria-hidden="true" />
                 </span>
                 <h3 className="mt-4 text-xs font-semibold uppercase tracking-[0.2em] text-navy/50">{card.title}</h3>
@@ -108,7 +108,7 @@ export default function Contact() {
                 href={site.instagram}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 rounded-full border border-navy/15 bg-white px-4 py-2 text-sm font-medium text-navy transition-colors hover:border-gold hover:text-gold"
+                className="inline-flex items-center gap-2 rounded-full border border-navy/15 bg-white px-4 py-2 text-sm font-medium text-navy transition-colors hover:border-silver hover:text-white"
               >
                 <InstagramIcon className="h-4 w-4" />
                 {site.instagramHandle}
@@ -117,7 +117,7 @@ export default function Contact() {
                 href={site.youtube}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 rounded-full border border-navy/15 bg-white px-4 py-2 text-sm font-medium text-navy transition-colors hover:border-gold hover:text-gold"
+                className="inline-flex items-center gap-2 rounded-full border border-navy/15 bg-white px-4 py-2 text-sm font-medium text-navy transition-colors hover:border-silver hover:text-white"
               >
                 <YoutubeIcon className="h-4 w-4" />
                 YouTube
@@ -140,7 +140,7 @@ export default function Contact() {
             />
             <div className="mt-8 rounded-2xl border border-white/10 bg-white/5 p-6 text-sm text-white/70">
               <p className="flex items-center gap-3">
-                <MapPin className="h-4 w-4 text-gold" aria-hidden="true" />
+                <MapPin className="h-4 w-4 text-white" aria-hidden="true" />
                 {site.location}
               </p>
               <p className="mt-3 text-xs leading-relaxed text-white/45">

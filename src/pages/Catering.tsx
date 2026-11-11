@@ -54,7 +54,7 @@ export default function Catering() {
             guests, budget and style.
           </p>
           <div className="mt-7 flex flex-col gap-3 sm:flex-row">
-            <a href="#catering-request" className="btn-gold">
+            <a href="#catering-request" className="btn-silver">
               Request a Quote
               <ArrowRight className="h-4 w-4" aria-hidden="true" />
             </a>
@@ -86,7 +86,7 @@ export default function Catering() {
               return (
                 <Reveal key={item.title} delay={(index % 3) * 80}>
                   <div className="card h-full p-6">
-                    <span className="grid h-11 w-11 place-items-center rounded-full bg-gold/15 text-gold">
+                    <span className="grid h-11 w-11 place-items-center rounded-full bg-silver/15 text-white">
                       <Icon className="h-5 w-5" aria-hidden="true" />
                     </span>
                     <h3 className="mt-4 font-display text-lg font-semibold text-navy">{item.title}</h3>
@@ -132,10 +132,10 @@ export default function Catering() {
               description="The more detail you share, the more accurate our proposal. We will respond with menu options and pricing."
             />
             <div className="mt-8 rounded-2xl border border-white/10 bg-white/5 p-6">
-              <p className="font-display text-2xl italic text-gold-light">{site.tagline}</p>
+              <p className="font-display text-2xl italic text-white">{site.tagline}</p>
               <p className="mt-3 text-sm leading-relaxed text-white/60">
                 Prefer to speak directly? Reach our team on{' '}
-                <a href={`tel:${site.phoneTel}`} className="text-gold-light hover:underline">
+                <a href={`tel:${site.phoneTel}`} className="text-white hover:underline">
                   {site.phoneDisplay}
                 </a>{' '}
                 or send a WhatsApp message.

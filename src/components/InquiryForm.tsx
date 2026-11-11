@@ -118,7 +118,7 @@ export default function InquiryForm({ kind, fields, submitLabel = 'Send Inquiry'
             <div key={field.name} className={field.full || field.type === 'textarea' ? 'sm:col-span-2' : ''}>
               <label htmlFor={id} className="field-label">
                 {field.label}
-                {field.required && <span className="ml-1 text-gold">*</span>}
+                {field.required && <span className="ml-1 text-white">*</span>}
               </label>
               {field.type === 'textarea' ? (
                 <textarea {...common} rows={4} placeholder={field.placeholder} />

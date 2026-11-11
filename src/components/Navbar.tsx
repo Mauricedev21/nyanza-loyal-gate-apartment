@@ -26,7 +26,7 @@ export default function Navbar() {
   return (
     <header
       className={`fixed inset-x-0 top-0 z-40 transition-all duration-500 ${
-        solid ? 'bg-navy/95 shadow-[0_10px_40px_-20px_rgba(0,0,0,0.8)] backdrop-blur-md' : 'bg-transparent'
+        solid ? 'bg-[var(--color-black-secondary)]/95 shadow-[0_10px_40px_-20px_rgba(0,0,0,0.8)] backdrop-blur-md' : 'bg-transparent'
       }`}
     >
       <div className="container-lux flex h-20 items-center justify-between gap-4">
@@ -39,10 +39,10 @@ export default function Navbar() {
             height={44}
           />
           <span className="leading-tight">
-            <span className="block font-display text-[1.05rem] font-semibold tracking-[0.14em] text-white sm:text-[1.15rem]">
+            <span className="block font-display text-[1.05rem] font-semibold tracking-[0.14em] text-[var(--color-ink)] sm:text-[1.15rem]">
               NYANZA ROYAL GATE
             </span>
-            <span className="block text-[0.62rem] font-medium uppercase tracking-[0.42em] text-gold">
+            <span className="block text-[0.62rem] font-medium uppercase tracking-[0.42em] text-[var(--color-ink)]">
               Apartment
             </span>
           </span>
@@ -65,18 +65,18 @@ export default function Navbar() {
         <div className="flex items-center gap-3">
           <a
             href={`tel:${site.phoneTel}`}
-            className="hidden items-center gap-2 text-sm font-medium text-white/85 transition-colors hover:text-gold-light xl:flex"
+            className="hidden items-center gap-2 text-sm font-medium text-[var(--color-ink)]/85 transition-colors hover:text-[var(--color-silver)] xl:flex"
           >
-            <Phone className="h-4 w-4 text-gold" aria-hidden="true" />
+            <Phone className="h-4 w-4 text-[var(--color-ink)]" aria-hidden="true" />
             {site.phoneDisplay}
           </a>
-          <Link to="/accommodation" className="btn-gold hidden !px-5 !py-2.5 text-[0.8rem] sm:inline-flex">
+          <Link to="/accommodation" className="btn-silver px-5 py-2.5 text-[0.8rem] inline-flex">
             Book Now
           </Link>
           <button
             type="button"
             onClick={() => setOpen((v) => !v)}
-            className="grid h-11 w-11 place-items-center rounded-full border border-white/25 text-white transition-colors hover:border-gold hover:text-gold lg:hidden"
+            className="grid h-11 w-11 place-items-center rounded-full border border-white/25 text-[var(--color-ink)] transition-colors hover:border-silver hover:text-[var(--color-ink)] lg:hidden"
             aria-label={open ? 'Close menu' : 'Open menu'}
             aria-expanded={open}
             aria-controls="mobile-menu"
@@ -89,7 +89,7 @@ export default function Navbar() {
       {/* Mobile menu */}
       <div
         id="mobile-menu"
-        className={`overflow-hidden border-t border-white/10 bg-navy transition-[max-height,opacity] duration-500 lg:hidden ${
+        className={`overflow-hidden border-t border-silver/10 bg-[var(--color-black-secondary)] transition-[max-height,opacity] duration-500 lg:hidden ${
           open ? 'max-h-[80vh] opacity-100' : 'max-h-0 opacity-0'
         }`}
       >
@@ -102,7 +102,7 @@ export default function Navbar() {
               onClick={() => setOpen(false)}
               className={({ isActive }) =>
                 `rounded-lg px-4 py-3 text-base font-medium transition-colors ${
-                  isActive ? 'bg-white/5 text-gold-light' : 'text-white/85 hover:bg-white/5 hover:text-white'
+                  isActive ? 'bg-white/5 text-[var(--color-ink)]' : 'text-[var(--color-ink)]/85 hover:bg-white/5 hover:text-[var(--color-ink)]'
                 }`
               }
             >
@@ -110,7 +110,7 @@ export default function Navbar() {
             </NavLink>
           ))}
           <div className="mt-3 flex flex-col gap-3 border-t border-white/10 pt-4 sm:hidden">
-            <Link to="/accommodation" onClick={() => setOpen(false)} className="btn-gold w-full">
+            <Link to="/accommodation" onClick={() => setOpen(false)} className="btn-silver w-full">
               Book Now
             </Link>
             <a href={`tel:${site.phoneTel}`} className="btn-outline w-full">
@@ -123,3 +123,4 @@ export default function Navbar() {
     </header>
   )
 }
+

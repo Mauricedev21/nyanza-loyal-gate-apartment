@@ -1,14 +1,23 @@
+/* Tailwind CSS - Event-Focused Monochrome Luxury Hospitality Theme */
+
+/* Color palette - Deep black, charcoal, pure white, soft white, subtle silver, muted grey */
 @import 'tailwindcss';
 
 @theme {
-  /* Brand palette */
+  /* Event-focused monochrome palette */
   --color-ink: #050505;
-  --color-navy: #071426;
-  --color-navy-soft: #0d2036;
-  --color-gold: #d6a33a;
-  --color-gold-light: #f2c45c;
-  --color-cream: #f5f3ef;
-  --color-cream-deep: #ece7dd;
+  --color-charcoal: #111111;
+  --color-black-primary: #050505;
+  --color-charcoal-secondary: #111111;
+  --color-card-black: #121212;
+  --color-black-elevated: #191919;
+  --color-white-pure: #FFFFFF;
+  --color-white-soft: #F5F5F5;
+  --color-silver: #C0C0C0;
+  --color-silver-muted: #929292;
+  --color-silver-border: #303030;
+
+  /* Gold and yellow completely removed - no gold/yellow in the new identity */
 
   /* Typography */
   --font-display: 'Cormorant Garamond', ui-serif, Georgia, serif;
@@ -18,6 +27,7 @@
   --ease-lux: cubic-bezier(0.22, 1, 0.36, 1);
 }
 
+/* Base styles */
 @layer base {
   html {
     scroll-behavior: smooth;
@@ -25,9 +35,7 @@
   }
 
   body {
-    @apply bg-cream text-navy font-body antialiased;
-    margin: 0;
-    overflow-x: hidden;
+    @apply bg-[var(--color-white-pure)] text-[var(--color-ink)] font-body antialiased;
   }
 
   h1,
@@ -39,97 +47,77 @@
   }
 
   ::selection {
-    background-color: var(--color-gold);
+    background-color: var(--color-silver);
     color: var(--color-ink);
   }
 
   :focus-visible {
-    outline: 2px solid var(--color-gold);
+    outline: 2px solid var(--color-silver);
     outline-offset: 3px;
   }
 }
 
+/* Custom components */
 @layer components {
   .container-lux {
     @apply mx-auto w-full max-w-7xl px-5 sm:px-8 lg:px-10;
   }
 
   .eyebrow {
-    @apply inline-flex items-center gap-2 text-[0.7rem] font-medium uppercase tracking-[0.35em] text-gold;
+    @apply inline-flex items-center gap-2 text-[0.7rem] font-medium uppercase tracking-[0.35em] text-[var(--color-silver)];
   }
 
+  /* Buttons - using only black, white, and silver */
   .btn,
-  .btn-gold,
   .btn-outline,
   .btn-dark,
   .btn-ghost {
     @apply inline-flex items-center justify-center gap-2 rounded-full px-7 py-3.5 text-sm font-medium tracking-wide transition-all duration-300 will-change-transform;
   }
 
-  .btn-gold {
-    @apply bg-gold text-ink shadow-[0_10px_30px_-12px_rgba(214,163,58,0.9)] hover:-translate-y-0.5 hover:bg-gold-light;
-  }
-
+  /* Primary: Black text on white background */
   .btn-outline {
-    @apply border border-white/30 text-white hover:-translate-y-0.5 hover:border-gold hover:text-gold-light;
+    @apply border border-silver/30 text-[var(--color-ink)] hover:-translate-y-0.5 hover:border-silver hover:text-silver;
   }
 
+  /* Tertiary: White background with silver border */
   .btn-dark {
-    @apply bg-navy text-cream hover:-translate-y-0.5 hover:bg-navy-soft;
+    @apply bg-white border border-silver/30 text-[var(--color-ink)] hover:-translate-y-0.5 hover:bg-[var(--color-charcoal)];
   }
 
+  /* Ghost: Transparent with silver border */
   .btn-ghost {
-    @apply border border-navy/20 text-navy hover:-translate-y-0.5 hover:border-gold hover:text-gold;
+    @apply border border-silver/20 text-[var(--color-ink)] hover:-translate-y-0.5 hover:border-silver hover:text-silver;
   }
 
-  .card {
-    @apply rounded-2xl border border-navy/10 bg-white shadow-[0_18px_50px_-30px_rgba(7,20,38,0.5)];
+  /* Secondary: Silver text on white */
+  .btn-silver {
+    @apply bg-white text-[var(--color-ink)] border border-silver/30 hover:-translate-y-0.5 hover:bg-silver/20;
   }
 
-  .field {
-    @apply w-full rounded-xl border border-navy/15 bg-white px-4 py-3 text-sm text-navy transition-colors placeholder:text-navy/40 focus:border-gold focus:outline-none focus:ring-2 focus:ring-gold/30;
-  }
-
-  .field-label {
-    @apply mb-1.5 block text-xs font-medium uppercase tracking-wider text-navy/60;
-  }
-
+  /* Navigation links */
   .nav-link {
-    @apply relative text-sm font-medium text-white/80 transition-colors hover:text-gold-light;
+    @apply relative text-[var(--color-ink)] transition-colors hover:text-[var(--color-silver)];
   }
 
   .nav-link-active {
-    @apply text-gold-light;
-  }
-}
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+    @apply text-[var(--color-ink)];
   }
 
-  .gold-rule {
-    background: linear-gradient(90deg, transparent, var(--color-gold), transparent);
+  /* Cards - minimal rounding, professional */
+  .card {
+    @apply rounded-none border border-silver/10 bg-white shadow-sm;
   }
 
-  .reveal {
-    opacity: 0;
-    transform: translateY(26px);
-    transition:
-      opacity 0.8s var(--ease-lux),
-      transform 0.8s var(--ease-lux);
+  .field {
+    @apply w-full rounded-xl border border-silver/15 bg-white/[var(--color-white-soft)] px-4 py-3 text-sm text-[var(--color-ink)] transition-colors placeholder:text-silver/40 focus:border-silver focus:outline-none focus:ring-2 focus:ring-silver/30;
   }
 
-  .reveal.is-visible {
-    opacity: 1;
-    transform: none;
+  .field-label {
+    @apply mb-1.5 block text-xs font-medium uppercase tracking-wider text-silver/50;
   }
 
-  .hero-vignette {
-    background:
-      linear-gradient(180deg, rgba(5, 5, 5, 0.55) 0%, rgba(5, 5, 5, 0.35) 40%, rgba(5, 5, 5, 0.85) 100%),
-      linear-gradient(90deg, rgba(7, 20, 38, 0.75) 0%, rgba(7, 20, 38, 0.25) 60%, rgba(7, 20, 38, 0.55) 100%);
-  }
+  /* Hero vignette - removed, using solid dark overlays instead */
 }
 
 /* Elegant custom scrollbar */
@@ -137,33 +125,15 @@
   width: 11px;
 }
 ::-webkit-scrollbar-track {
-  background: var(--color-cream-deep);
+  background: var(--color-white-soft);
 }
 ::-webkit-scrollbar-thumb {
-  background: var(--color-gold);
+  background: var(--color-silver);
   border-radius: 999px;
-  border: 3px solid var(--color-cream-deep);
+  border: 3px solid var(--color-white-soft);
 }
 
-@keyframes float-slow {
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-8px);
-  }
-}
-
-@keyframes shimmer {
-  0% {
-    background-position: -200% 0;
-  }
-  100% {
-    background-position: 200% 0;
-  }
-}
-
+/* Reduced motion */
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;

@@ -82,8 +82,8 @@ export default function Gallery() {
                 aria-pressed={filter === category}
                 className={`rounded-full border px-4 py-2 text-sm font-medium transition-all duration-300 ${
                   filter === category
-                    ? 'border-gold bg-gold text-ink shadow-[0_8px_20px_-10px_rgba(214,163,58,0.9)]'
-                    : 'border-navy/15 bg-white text-navy/70 hover:border-gold hover:text-navy'
+                    ? 'border-silver bg-silver text-white shadow-[0_8px_20px_-10px_rgba(0,0,0,0.9)]'
+                    : 'border-navy/15 bg-white text-navy/70 hover:border-silver hover:text-white'
                 }`}
               >
                 {category}
@@ -136,7 +136,7 @@ export default function Gallery() {
           <button
             type="button"
             onClick={close}
-            className="absolute right-4 top-4 z-10 grid h-11 w-11 place-items-center rounded-full border border-white/20 text-white transition-colors hover:border-gold hover:text-gold"
+            className="absolute right-4 top-4 z-10 grid h-11 w-11 place-items-center rounded-full border border-white/20 text-white transition-colors hover:border-silver hover:text-white"
             aria-label="Close image viewer"
           >
             <X className="h-5 w-5" />
@@ -148,7 +148,7 @@ export default function Gallery() {
               event.stopPropagation()
               prev()
             }}
-            className="absolute left-3 top-1/2 z-10 grid h-11 w-11 -translate-y-1/2 place-items-center rounded-full border border-white/20 text-white transition-colors hover:border-gold hover:text-gold sm:left-6"
+            className="absolute left-3 top-1/2 z-10 grid h-11 w-11 -translate-y-1/2 place-items-center rounded-full border border-white/20 text-white transition-colors hover:border-silver hover:text-white sm:left-6"
             aria-label="Previous image"
           >
             <ChevronLeft className="h-6 w-6" />
@@ -161,7 +161,7 @@ export default function Gallery() {
               className="mx-auto max-h-[78vh] w-auto rounded-lg object-contain"
             />
             <figcaption className="mt-4 text-center text-sm text-white/70">
-              <span className="font-medium text-gold-light">{active.category}</span> — {active.alt}
+              <span className="font-medium text-white">{active.category}</span> — {active.alt}
               <span className="ml-2 text-white/40">
                 ({(activeIndex ?? 0) + 1} / {filtered.length})
               </span>
@@ -174,7 +174,7 @@ export default function Gallery() {
               event.stopPropagation()
               next()
             }}
-            className="absolute right-3 top-1/2 z-10 grid h-11 w-11 -translate-y-1/2 place-items-center rounded-full border border-white/20 text-white transition-colors hover:border-gold hover:text-gold sm:right-6"
+            className="absolute right-3 top-1/2 z-10 grid h-11 w-11 -translate-y-1/2 place-items-center rounded-full border border-white/20 text-white transition-colors hover:border-silver hover:text-white sm:right-6"
             aria-label="Next image"
           >
             <ChevronRight className="h-6 w-6" />

@@ -47,7 +47,7 @@ export default function Accommodation() {
             and our team will respond with the best available option for your visit.
           </p>
           <div className="mt-7 flex flex-col gap-3 sm:flex-row">
-            <a href="#booking" className="btn-gold">
+            <a href="#booking" className="btn-silver">
               Make an Inquiry
               <ArrowRight className="h-4 w-4" aria-hidden="true" />
             </a>
@@ -81,7 +81,7 @@ export default function Accommodation() {
               return (
                 <Reveal key={item.label} delay={index * 60}>
                   <div className="flex h-full flex-col items-center gap-3 rounded-2xl bg-white p-5 text-center">
-                    <span className="grid h-11 w-11 place-items-center rounded-full bg-gold/15 text-gold">
+                    <span className="grid h-11 w-11 place-items-center rounded-full bg-silver/15 text-white">
                       <Icon className="h-5 w-5" aria-hidden="true" />
                     </span>
                     <span className="text-sm font-medium text-navy/75">{item.label}</span>
@@ -123,17 +123,17 @@ export default function Accommodation() {
               description="Complete the form and our team will confirm availability and rates. Prefer to talk? Call or message us directly."
             />
             <div className="mt-8 space-y-4 text-sm text-white/75">
-              <a href={`tel:${site.phoneTel}`} className="flex items-center gap-3 transition-colors hover:text-gold-light">
-                <Phone className="h-4 w-4 text-gold" aria-hidden="true" />
+              <a href={`tel:${site.phoneTel}`} className="flex items-center gap-3 transition-colors hover:text-white">
+                <Phone className="h-4 w-4 text-white" aria-hidden="true" />
                 {site.phoneDisplay}
               </a>
               <a
                 href={whatsappLink(whatsappMessages.accommodation)}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-3 transition-colors hover:text-gold-light"
+                className="flex items-center gap-3 transition-colors hover:text-white"
               >
-                <span className="grid h-4 w-4 place-items-center text-gold" aria-hidden="true">
+                <span className="grid h-4 w-4 place-items-center text-white" aria-hidden="true">
                   <svg viewBox="0 0 24 24" className="h-4 w-4" fill="currentColor">
                     <path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm4.5 12.2c-.2-.1-1.4-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.2-.6.8-.8 1-.1.2-.3.2-.5.1-.2-.1-1-.4-1.9-1.2a7 7 0 0 1-1.3-1.7c-.1-.2 0-.4.1-.5l.4-.5c.1-.2.2-.3.3-.5.1-.2 0-.3 0-.5s-.6-1.5-.8-2c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.2-.9.9-.9 2.2s.9 2.5 1 2.7c.1.2 1.8 2.8 4.4 3.9.6.3 1.1.4 1.5.6.6.2 1.2.2 1.6.1.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2-.1-.1-.2-.2-.4-.3Z" />
                   </svg>

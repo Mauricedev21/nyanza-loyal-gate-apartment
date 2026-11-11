@@ -22,7 +22,7 @@ export default function SectionHeading({
   return (
     <div className={`flex max-w-2xl flex-col ${alignment} ${className}`}>
       {eyebrow && (
-        <span className={`eyebrow ${light ? 'text-gold-light' : 'text-gold'}`}>
+        <span className={`eyebrow ${light ? 'text-silver-light' : 'text-silver'}`}>
           <span className="h-px w-6 bg-current" />
           {eyebrow}
         </span>

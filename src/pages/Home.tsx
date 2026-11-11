@@ -58,7 +58,7 @@ export default function Home() {
                   width={56}
                   height={56}
                 />
-                <span className="eyebrow text-gold-light">
+                <span className="eyebrow text-white">
                   <span className="h-px w-8 bg-current" />
                   {site.location}
                 </span>
@@ -70,7 +70,7 @@ export default function Home() {
               <h1 className="mt-3 font-display text-4xl font-semibold leading-[1.02] text-white text-balance sm:text-6xl lg:text-7xl">
                 Nyanza Royal Gate Apartment
               </h1>
-              <p className="mt-4 font-display text-2xl italic text-gold-light sm:text-3xl">{site.tagline}</p>
+              <p className="mt-4 font-display text-2xl italic text-white sm:text-3xl">{site.tagline}</p>
             </Reveal>
 
             <Reveal delay={200}>
@@ -82,7 +82,7 @@ export default function Home() {
 
             <Reveal delay={300}>
               <div className="mt-9 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
-                <Link to="/accommodation" className="btn-gold">
+                <Link to="/accommodation" className="btn-silver">
                   Book Accommodation
                   <ArrowRight className="h-4 w-4" aria-hidden="true" />
                 </Link>
@@ -105,7 +105,7 @@ export default function Home() {
         <div className="pointer-events-none absolute inset-x-0 bottom-6 hidden justify-center sm:flex">
           <span className="flex flex-col items-center gap-2 text-[0.6rem] uppercase tracking-[0.4em] text-white/50">
             Scroll
-            <span className="h-10 w-px bg-gradient-to-b from-gold to-transparent" />
+            <span className="h-10 w-px bg-gradient-to-b from-silver to-transparent" />
           </span>
         </div>
       </section>
@@ -121,7 +121,7 @@ export default function Home() {
               loading="lazy"
             />
             <div className="absolute -bottom-6 -right-4 hidden max-w-[220px] rounded-xl bg-navy p-5 text-cream shadow-xl sm:block">
-              <p className="font-display text-3xl font-semibold text-gold-light">RGA</p>
+              <p className="font-display text-3xl font-semibold text-white">RGA</p>
               <p className="mt-1 text-xs uppercase tracking-[0.2em] text-cream/60">Hospitality &amp; Catering</p>
             </div>
           </div>
@@ -145,7 +145,7 @@ export default function Home() {
                 'Weddings & celebrations',
               ].map((item) => (
                 <div key={item} className="flex items-center gap-3 rounded-xl border border-navy/10 bg-white px-4 py-3 text-sm font-medium text-navy/80">
-                  <span className="grid h-7 w-7 shrink-0 place-items-center rounded-full bg-gold/15 text-gold">
+                  <span className="grid h-7 w-7 shrink-0 place-items-center rounded-full bg-silver/15 text-white">
                     <Star className="h-3.5 w-3.5" aria-hidden="true" />
                   </span>
                   {item}
@@ -154,7 +154,7 @@ export default function Home() {
             </div>
           </Reveal>
           <Reveal delay={200}>
-            <Link to="/about" className="mt-8 inline-flex items-center gap-2 text-sm font-semibold text-gold transition-colors hover:text-navy">
+            <Link to="/about" className="mt-8 inline-flex items-center gap-2 text-sm font-semibold text-white transition-colors hover:text-navy">
               Discover our story
               <ArrowRight className="h-4 w-4" aria-hidden="true" />
             </Link>
@@ -179,14 +179,14 @@ export default function Home() {
               return (
                 <Reveal key={service.title} delay={index * 80}>
                   <article className="group flex h-full flex-col rounded-2xl border border-navy/10 bg-white p-7 shadow-[0_18px_50px_-35px_rgba(7,20,38,0.6)] transition-transform duration-300 hover:-translate-y-1">
-                    <span className="grid h-12 w-12 place-items-center rounded-full bg-navy text-gold transition-colors duration-300 group-hover:bg-gold group-hover:text-ink">
+                    <span className="grid h-12 w-12 place-items-center rounded-full bg-navy text-white transition-colors duration-300 group-hover:bg-white/20 group-hover:text-ink">
                       <Icon className="h-5 w-5" aria-hidden="true" />
                     </span>
                     <h3 className="mt-5 font-display text-xl font-semibold text-navy">{service.title}</h3>
                     <p className="mt-2 flex-1 text-sm leading-relaxed text-navy/60">{service.description}</p>
                     <Link
                       to="/services"
-                      className="mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-gold transition-colors hover:text-navy"
+                      className="mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-white transition-colors hover:text-navy"
                     >
                       Learn more
                       <ArrowRight className="h-3.5 w-3.5" aria-hidden="true" />
@@ -218,7 +218,7 @@ export default function Home() {
             description="Our catering team brings restaurant-quality food to your venue. Whether an intimate dinner, a wedding feast or a conference lunch, we plan menus that look as beautiful as they taste."
           />
           <div className="mt-7 flex flex-col gap-3 sm:flex-row">
-            <Link to="/catering" className="btn-gold">
+            <Link to="/catering" className="btn-silver">
               Explore Catering
               <ArrowRight className="h-4 w-4" aria-hidden="true" />
             </Link>
@@ -262,7 +262,7 @@ export default function Home() {
               description="Weddings, proposals, birthdays, civil ceremonies and conferences — our team plans, styles and coordinates every detail so you can be fully present for the moment."
             />
             <div className="mt-7 flex flex-col gap-3 sm:flex-row">
-              <Link to="/events" className="btn-gold">
+              <Link to="/events" className="btn-silver">
                 Plan an Event
                 <ArrowRight className="h-4 w-4" aria-hidden="true" />
               </Link>
@@ -294,7 +294,7 @@ export default function Home() {
             return (
               <Reveal key={item.title} delay={index * 80}>
                 <div className="card h-full p-6">
-                  <span className="grid h-11 w-11 place-items-center rounded-full bg-navy text-gold">
+                  <span className="grid h-11 w-11 place-items-center rounded-full bg-navy text-white">
                     <Icon className="h-5 w-5" aria-hidden="true" />
                   </span>
                   <h3 className="mt-4 font-display text-lg font-semibold text-navy">{item.title}</h3>
@@ -351,7 +351,7 @@ export default function Home() {
         <div className="absolute inset-0 -z-10 bg-gradient-to-r from-navy via-navy/85 to-navy/60" />
         <div className="container-lux py-20 text-center md:py-24">
           <Reveal>
-            <span className="eyebrow text-gold-light">
+            <span className="eyebrow text-white">
               <span className="h-px w-6 bg-current" />
               Reserve Your Stay
             </span>
@@ -363,7 +363,7 @@ export default function Home() {
               details.
             </p>
             <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
-              <Link to="/accommodation" className="btn-gold">
+              <Link to="/accommodation" className="btn-silver">
                 Book Accommodation
               </Link>
               <a

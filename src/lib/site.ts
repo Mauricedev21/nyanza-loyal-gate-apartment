@@ -58,80 +58,71 @@ export const serviceList = [
   {
     title: 'VIP Accommodation',
     icon: 'BedDouble',
+    image: assets.rooms,
     description:
       'Elegant rooms and suites with premium bedding, en-suite bathrooms and thoughtful amenities for a restful, first-class stay.',
   },
   {
     title: 'Conference Hall',
     icon: 'Building2',
+    image: assets.conference,
     description:
       'A refined conference venue for meetings, seminars and corporate gatherings, arranged to your programme and guest numbers.',
   },
   {
     title: 'Restaurant & Bar',
-    icon: 'UtensilsCrossed',
+    image: assets.conference,
     description:
-      'Seasonal Rwandan and international cuisine served in an intimate dining room, with a bar for aperitifs and celebrations.',
-  },
-  {
-    title: 'Outside Catering',
-    icon: 'Truck',
-    description:
-      'Full-service catering delivered to your chosen venue, with professional staff, elegant presentation and flexible menus.',
-  },
-  {
-    title: 'Online Catering',
-    icon: 'Laptop',
-    description:
-      'Send your catering request online and our team will respond with a tailored proposal, menu and quote.',
-  },
-  {
-    title: 'Event Planning',
-    icon: 'CalendarHeart',
-    description:
-      'End-to-end planning and coordination, from concept and styling to logistics, so your occasion unfolds effortlessly.',
+      'An intimate dining room serving seasonal Rwandan and international cuisine, with a bar for aperitifs and celebrations, within the main venue.',
   },
   {
     title: 'Sauna & Massage',
     icon: 'Sparkles',
+    image: assets.massage,
     description:
       'Unwind in our sauna and wellness space, with professional massage treatments designed to restore and relax.',
   },
   {
-    title: 'Weddings',
-    icon: 'Heart',
-    description:
-      'Beautifully styled wedding ceremonies and receptions, planned with care and delivered with elegance and precision.',
-  },
-  {
-    title: 'Wedding Proposals',
-    icon: 'Gem',
-    description:
-      'Intimate, romantic proposal settings curated around your story, creating a moment you will treasure forever.',
-  },
-  {
-    title: 'Birthday Celebrations',
-    icon: 'CakeSlice',
-    description:
-      'Joyful birthday celebrations with styling, catering and entertainment tailored to the guest of honour.',
-  },
-  {
-    title: 'Civil Weddings',
-    icon: 'ScrollText',
-    description:
-      'Civil wedding ceremonies and receptions, with coordination of arrangements for a seamless, dignified union.',
-  },
-  {
     title: 'Service & Protocol',
     icon: 'Handshake',
+    image: assets.conference,
     description:
       'Professional service and protocol support that lends dignity, order and polish to formal events and VIP guests.',
   },
   {
     title: 'Sanitation Services',
     icon: 'Sparkle',
+    image: assets.massage,
     description:
       'Reliable sanitation and hygiene support for venues and events, keeping every space clean, safe and welcoming.',
+  },
+  {
+    title: 'Weddings and Proposals',
+    icon: 'Heart',
+    image: assets.weddings,
+    description:
+      'Beautifully styled wedding ceremonies and intimate romantic proposal settings, planned with care and delivered with elegance and precision.',
+  },
+  {
+    title: 'Catering',
+    icon: 'Truck',
+    image: assets.weddings,
+    description:
+      'Full-service catering delivered to your chosen venue (Outside Catering) and online request options (Online Catering) for tailored menu proposals and quotes.',
+  },
+  {
+    title: 'Event Planning',
+    icon: 'CalendarHeart',
+    image: assets.weddings,
+    description:
+      'End-to-end planning and coordination of weddings, proposals, birthdays and other celebrations from concept and styling to logistics.',
+  },
+  {
+    title: 'Birthday Celebrations',
+    icon: 'CakeSlice',
+    image: assets.weddings,
+    description:
+      'Joyful birthday celebrations with styling, catering and entertainment tailored to the guest of honour.',
   },
 ] as const
 

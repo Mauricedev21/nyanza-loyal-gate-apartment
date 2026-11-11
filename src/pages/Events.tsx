@@ -49,7 +49,7 @@ export default function Events() {
             return (
               <Reveal key={event.title} delay={(index % 3) * 80}>
                 <article className="group flex h-full flex-col rounded-2xl border border-navy/10 bg-white p-7 shadow-[0_18px_50px_-35px_rgba(7,20,38,0.6)] transition-transform duration-300 hover:-translate-y-1">
-                  <span className="grid h-12 w-12 place-items-center rounded-full bg-navy text-gold transition-colors duration-300 group-hover:bg-gold group-hover:text-ink">
+                  <span className="grid h-12 w-12 place-items-center rounded-full bg-navy text-white transition-colors duration-300 group-hover:bg-white/20 group-hover:text-white">
                     <Icon className="h-5 w-5" aria-hidden="true" />
                   </span>
                   <h3 className="mt-5 font-display text-xl font-semibold text-navy">{event.title}</h3>
@@ -80,7 +80,7 @@ export default function Events() {
                 'On-the-day coordination and service',
               ].map((item) => (
                 <li key={item} className="flex items-start gap-3">
-                  <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-gold" aria-hidden="true" />
+                  <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-white" aria-hidden="true" />
                   {item}
                 </li>
               ))}
@@ -89,7 +89,7 @@ export default function Events() {
               href={whatsappLink(whatsappMessages.event)}
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-gold mt-8"
+              className="btn-silver mt-8"
             >
               Discuss Your Event
             </a>
@@ -115,19 +115,19 @@ export default function Events() {
             />
             <div className="mt-8 space-y-3 text-sm text-navy/60">
               <p className="flex items-start gap-3">
-                <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-gold" aria-hidden="true" />
+                <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-white" aria-hidden="true" />
                 Weddings, proposals and civil ceremonies
               </p>
               <p className="flex items-start gap-3">
-                <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-gold" aria-hidden="true" />
+                <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-white" aria-hidden="true" />
                 Birthdays and private celebrations
               </p>
               <p className="flex items-start gap-3">
-                <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-gold" aria-hidden="true" />
+                <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-white" aria-hidden="true" />
                 Conferences and corporate gatherings
               </p>
             </div>
-            <Link to="/catering" className="mt-7 inline-flex items-center gap-2 text-sm font-semibold text-gold transition-colors hover:text-navy">
+            <Link to="/catering" className="mt-7 inline-flex items-center gap-2 text-sm font-semibold text-white transition-colors hover:text-navy">
               Need catering too? Explore RGA Catering
               <ArrowRight className="h-4 w-4" aria-hidden="true" />
             </Link>
